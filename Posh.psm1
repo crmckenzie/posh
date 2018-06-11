@@ -1,13 +1,8 @@
-# Load all the functions in
-$global:moduleRoot = split-path $MyInvocation.MyCommand.Path
-$filesToLoad = gci *.ps1 -path export,private -Recurse
+gci *.ps1 -path export,private -Recurse | %{
+    . $_.FullName
+}
 
-$FilesToLoad | %{
-    . $_.Fullname
-
-    if (-not ($_.FullName.Contains("Private"))) {
-        write-host "Exporting $($_.Name)"
-        Export-ModuleMember $_.BaseName
-    }
+gci *.ps1 -path export -Recurse | %{
+    Export-ModuleMember $_.BaseName
 }
 

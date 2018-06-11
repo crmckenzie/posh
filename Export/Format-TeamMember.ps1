@@ -1,21 +1,18 @@
-function Out-Data(){
+function Format-TeamMember(){
     param(
         [Parameter(Mandatory, ValueFromPipelineByPropertyName)] [string] $Name,
 
         [Alias("Value")]
         [Parameter(Mandatory, ValueFromPipelineByPropertyName)] [string] $Title
     )
-    
     Begin {
-        write-host "Begin" -ForegroundColor Green
+        # Do one-time operations needed to support the pipe here
     }
-
     Process {
-        write-host "Name: $Name; Title: $Title;"
-        return $Name
+        return "Name: $Name; Title: $Title" # Use the newly renamed parameter
+    }
+    End {
+        # Cleanup before the pipe closes here
     }
 
-    End {
-        write-host "End" -ForegroundColor Green
-    }
 }

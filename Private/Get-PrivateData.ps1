@@ -36,11 +36,11 @@ function Get-PrivateData() {
 
     [PSCustomObject]@{
         "Name" ="Michael";
-        "Value" = "Service Engineer";
+        "Value" = "Software Engineer";
     },
     [PSCustomObject]@{
         "Name" ="Shad";
-        "Value" = "Service Engineer";
+        "Value" = "Software Engineer";
     },
     [PSCustomObject]@{
         "Name" ="Olga";
