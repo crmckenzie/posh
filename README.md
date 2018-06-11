@@ -85,8 +85,8 @@ Nelson  Service Engineer
 Kiran   Service Engineer
 Raj     Software Engineer
 Matt    Software Engineer
-Michael Service Engineer
-Shad    Service Engineer
+Michael Software Engineer
+Shad    Software Engineer
 Olga    Software Engineer
 ```
 
