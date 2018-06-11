@@ -2,7 +2,7 @@
 
 ## Contents
 
-* [Destructuring](#Destructuring)
+* [Destructuring](#destructuring)
 * [Array Comparisons](#Array-Comparisons)
     * [Null Coalesce](#Null-Coalesce)
 * [Module Structure](#Module-Structure)
