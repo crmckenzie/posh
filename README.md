@@ -1,7 +1,5 @@
 # My Favorite Powershell Features You're Not Using
 
-## Contents
-
 * [Destructuring](#destructuring)
 * [Array Comparisons](#array-comparisons)
     * [Null Coalesce](#null-coalesce)
