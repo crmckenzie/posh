@@ -1,5 +1,20 @@
 # My Favorite Powershell Features You're Not Using
 
+## Contents
+
+* [Destructuring](##Destructuring)
+* [Array Comparisons](##Array-Comparisons)
+    * [Null Coalesce](###Null-Coalesce)
+* [Module Structure](##Module-Structure)
+* [Piping](##Piping)
+    * [The Naive Solution](###The-Naive-Solution)
+    * [Convert To Singular](###Convert-to-Singular)
+    * [Begin, Process, End](###Begin,-Process,-End)
+    * [ValueFromPipeLine... ByPropertyName](###ValueFromPipeLine...-ByPropertyName)
+    * [Alias](###Alias)
+    * [Pipe Forwarding](###Pipe-Forwarding)
+    * [Filtering](###Filtering)
+
 ## Destructuring
 
 What is *destructuring?*
