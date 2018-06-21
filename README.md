@@ -1,6 +1,7 @@
 # My Favorite Powershell Features You're Not Using
 
 * [Destructuring](#destructuring)
+    * [Destructuring Gotchas](#destructuring-gotchas)
 * [Array Comparisons](#array-comparisons)
     * [Null Coalesce](#null-coalesce)
 * [Module Structure](#module-structure)
@@ -36,6 +37,64 @@ $therest
 ```
 
 As you can see, Powershell assigns the first and second values in the array to the variables `$first` and `$second`. The remaining items are then assigned to the last variable in the assignment list.
+
+### Destructuring Gotchas
+
+If we look at the following Powershell code nothing seems out of the ordinary.
+
+```powershell
+$arr = @(1)
+$arr.GetType().FullName
+System.Object[]
+```
+
+However, look at this code sample:
+
+```powershell
+Function Get-Array() { return @() } # No Elements
+$arr = Get-Array
+$arr.GetType()
+You cannot call a method on a null-valued expression.
+At line:1 char:1
++ $arr.GetType()
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : InvokeMethodOnNull
+
+$arr -eq $null
+True
+
+Function Get-Array() { return @(1) } # One Element
+$arr = Get-Array
+$arr.GetType().FulLname
+System.Int32
+
+Function Get-Array() { return @(1,2) } # Multiple Elements
+$arr = Get-Array
+$arr.GetType().FullName
+System.Object[]
+```
+
+When returning arrays from functions, if the array contains only a single element, the default Powershell behavior is to destructure it. This can sometimes lead to confusing results.
+
+You can override this behavior by prepending the resultant array with a ',' which tells Powershell that the return type should not be destructured:
+
+```powershell
+Function Get-Array() {return ,@()} # No Elements
+$arr = Get-Array
+$arr.GetType().FullName
+System.Object[]
+
+Function Get-Array() {return ,@(1)} # One Element
+$arr = Get-Array
+$arr.GetType().FullName
+System.Object[]
+
+Function Get-Array() {return ,@(1,2)}
+$arr = Get-Array
+$arr.GetType().FullName
+System.Object[]
+```
 
 ## Array Comparisons
 
