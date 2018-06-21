@@ -10,7 +10,7 @@
     * [Convert To Singular](#convert-to-singular)
     * [Begin, Process, End](#begin-process-end)
     * [ValueFromPipeLine... ByPropertyName](#valuefrompipeline-bypropertyname)
-    * [Alias](#aias)
+    * [Alias](#alias)
     * [Pipe Forwarding](#pipe-forwarding)
     * [Filtering](#filtering)
 
