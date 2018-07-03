@@ -18,9 +18,9 @@
 
 What is *destructuring?*
 
-    Destructuring is a convenient way of extracting multiple values from data stored in (possibly nested) objects and Arrays. It can be used in locations that receive data (such as the left-hand side of an assignment).
+> Destructuring is a convenient way of extracting multiple values from data stored in (possibly nested) objects and Arrays. It can be used in locations that receive data (such as the left-hand side of an assignment).
 
-[source](exploringjs.com/es6/ch_destructuring.html)
+[source](http://exploringjs.com/es6/ch_destructuring.html)
 
 Here is an example of destructuring in powershell.
 
@@ -51,7 +51,10 @@ System.Object[]
 However, look at this code sample:
 
 ```powershell
-Function Get-Array() { return @() } # No Elements
+# When Function Returns No Elements
+Function Get-Array() { 
+    return @() 
+} 
 $arr = Get-Array
 $arr.GetType()
 You cannot call a method on a null-valued expression.
@@ -64,12 +67,18 @@ At line:1 char:1
 $arr -eq $null
 True
 
-Function Get-Array() { return @(1) } # One Element
+# When Function Returns One Element
+Function Get-Array() { 
+    return @(1)  
+}
 $arr = Get-Array
-$arr.GetType().FulLname
+$arr.GetType().FullName
 System.Int32
 
-Function Get-Array() { return @(1,2) } # Multiple Elements
+# When Function Returns Multiple Elements
+Function Get-Array() { 
+    return @(1,2)
+} 
 $arr = Get-Array
 $arr.GetType().FullName
 System.Object[]
@@ -80,17 +89,26 @@ When returning arrays from functions, if the array contains only a single elemen
 You can override this behavior by prepending the resultant array with a ',' which tells Powershell that the return type should not be destructured:
 
 ```powershell
-Function Get-Array() {return ,@()} # No Elements
+# When Function Returns No Elements
+Function Get-Array() {
+    return ,@() 
+} 
 $arr = Get-Array
 $arr.GetType().FullName
 System.Object[]
 
-Function Get-Array() {return ,@(1)} # One Element
+# When Function Returns One Element
+Function Get-Array() {
+    return ,@(1) 
+} 
 $arr = Get-Array
 $arr.GetType().FullName
 System.Object[]
 
-Function Get-Array() {return ,@(1,2)}
+# When Function Returns Multiple Elements
+Function Get-Array() {
+    return ,@(1,2)
+}
 $arr = Get-Array
 $arr.GetType().FullName
 System.Object[]
