@@ -1,4 +1,4 @@
-Describe "Out-Data" {
+Describe "Format-TeamMember" {
 
     Context "When it is passed data" {
         it "Displays the data" {

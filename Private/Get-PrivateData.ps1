@@ -5,45 +5,45 @@ function Get-PrivateData() {
     },
 
     [PSCustomObject]@{
-        "Name" ="Paul";
+        "Name" ="Phillip";
         "Value" = "Service Engineer";
     },
 
     [PSCustomObject]@{
-        "Name" ="Anthony";
+        "Name" ="Andy";
         "Value" = "Service Engineer";
     },
 
     [PSCustomObject]@{
-        "Name" ="Nelson";
+        "Name" ="Neil";
         "Value" = "Service Engineer";
     },
 
     [PSCustomObject]@{
-        "Name" ="Kiran";
+        "Name" ="Kevin";
         "Value" = "Service Engineer";
     },
 
     [PSCustomObject]@{
-        "Name" ="Raj";
+        "Name" ="Rick";
         "Value" = "Software Engineer";
     },
 
     [PSCustomObject]@{
-        "Name" ="Matt";
+        "Name" ="Mark";
         "Value" = "Software Engineer";
     },
 
     [PSCustomObject]@{
-        "Name" ="Michael";
+        "Name" ="Miguel";
         "Value" = "Software Engineer";
     },
     [PSCustomObject]@{
-        "Name" ="Shad";
+        "Name" ="Stewart";
         "Value" = "Software Engineer";
     },
     [PSCustomObject]@{
-        "Name" ="Olga";
+        "Name" ="Ophelia";
         "Value" = "Software Engineer";
     }
 
